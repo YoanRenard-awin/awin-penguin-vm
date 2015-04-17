@@ -1,3 +1,7 @@
 ---
-- hosts: localhost
-  sudo: yes
+# Install ans configure MySQL
+- hosts: all
+  vars_files:
+    - vars/elao.mysql-server/vars.yml
+  roles:
+    - { role: roles/elao.mysql-server }

@@ -28,3 +28,10 @@ install_projects: install_project_darwin install_project_services install_projec
 reset_projects: install_projects
 	rm -fr sites/*
 	install_projects
+
+install_roles:
+	ansible-galaxy install elao.mysql-server -p provisioning/roles
+
+install_requirements: install_roles install_projects
+	install_roles
+	install_projects
