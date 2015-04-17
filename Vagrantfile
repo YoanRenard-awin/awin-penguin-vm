@@ -43,8 +43,8 @@ Vagrant.configure(2) do |config|
     config.vm.network :private_network, ip: "192.168.111.222"
 
     config.vm.provision "ansible" do |ansible|
+#        ansible.inventory_path = "provisioning/hosts"
         ansible.playbook = "provisioning/playbook.yml"
-        ansible.inventory_path = "provisioning/hosts"
         ansible.verbose = "vvvv"
     end
 end

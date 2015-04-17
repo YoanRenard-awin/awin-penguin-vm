@@ -1,0 +1,10 @@
+---
+elao_mysql_users:
+  - { name: 'darwin', password: 'darwin', priv: 'darwin.*:ALL', host: 'localhost' }
+elao_mysql_databases:
+  - { name: 'darwin' }
+elao_mysql_login_user:     root
+elao_mysql_login_password: null
+elao_mysql_login_host:     localhost
+
+elao_mysql_login_auto: false
